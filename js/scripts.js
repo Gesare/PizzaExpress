@@ -1,0 +1,11 @@
+$(document).ready(function(){
+$(".A").hover(function(){
+  $(".large").slideToggle()
+});
+$(".B").hover(function(){
+  $(".medium").slideToggle()
+});
+$(".C").hover(function(){
+  $(".small").slideToggle()
+});
+});
