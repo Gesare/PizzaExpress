@@ -104,6 +104,8 @@
           <div class="col-md-8">
             <h2>ORDER HERE:</h2>
             <form id="new-contact">
+              <div class="new-deli">
+                <div id="new-deli">
               <div class="form-group">
                 <label for="new-first-name">Full name:</label>
                 <input type="text" class="form-control" id="new-first-name">
@@ -115,10 +117,26 @@
                   <option>Medium 800ksh</option>
                   <option>Large  1200ksh</option>
                 </select>
-              </div>
-              <div id="new-addresses">
-                <div class="new-address">
+             </div>
+                  <label for="sel2">top</label>
+                  <select  class="form-control" id="sel2" name="sellist2">
+                    <option>Sausage, caramelized onions, and fennel- 300ksh.</option>
+                    <option>Pepperoni, tomatoes, mushrooms, and onion-300ksh.</option>
+                    <option>Pepperoni, sausage, green pepper, onion, and mushroom- 300ksh.</option>
+                    <option>BBQ sauce, grilled chicken, scallions, and cheddar cheese 300ksh.</option>
+                    <option>Thousand Island dressing, topped with sauerkraut, corned beef or pastrami, and Swiss cheese -300ksh.</option>
+                  </select>
+                  <br>
                   <div class="form-group">
+                    <label for="new-first-name">Amount:</label>
+                    <input type="number" class="form-control" id="new-first-name">
+                  </div>
+                   </div>
+                </div>
+                <div class="Delivery">
+                  <div class="form-group">
+                    <br><br>
+                    <h3>DELIVERIES</h3>
                     <label for="new-street">Street</label>
                     <input type="text" class="form-control new-street">
                   </div>
@@ -131,7 +149,7 @@
                     <input type="text" class="form-control new-county">
                   </div>
                 </div>
-              </div>
+
 
               <span class="btn btn-primary" id="add-address">Another order</span>
 
@@ -143,6 +161,7 @@
 
             </ul>
           </div>
+        </div>
         </div>
       </div>
     </div>
