@@ -1,4 +1,4 @@
-// Business logic
+// Business logic section
 function Order(size, crust, topping, number) {
     this.pizzaSize = size;
     this.pizzaCrust = crust;
@@ -9,7 +9,7 @@ Order.prototype.aboutOrder = function () {
     return this.pizzaSize + "," + this.pizzaCrust + "," + this.pizzaToppings + "," + this.pizzaNumber;
 }
 
-// UI Logic
+// User interface part
 $(document).ready(function () {
     $('form#orders').submit(function (event) {
         event.preventDefault();
@@ -67,7 +67,7 @@ $(document).ready(function () {
         $("#price").show();
         $("#order").show();
         $("#details").text()=choosenSize+", "+choosenCrust+", ";
-        $("#pizza-amount").text() = priceSize + priceCrust + specialTopping + " Rwf";
+        $("#pizza-amount").text() = priceSize + priceCrust + specialTopping + " ksh";
         $("#check").show();
         $("#check").click(function () {
             $("#price").show();
@@ -77,8 +77,8 @@ $(document).ready(function () {
     });
     $("#deliver").click(function () {
         alert("Please, mention your location!");
-        var location = prompt("Enter your location address!");
-        alert("Thanks, you will be delivered at " + location);
+        var location = prompt("Please enter your location kindly;");
+        alert("Thank you very much your pizza will be delivered at " + location);
         $("#check").show();
         $("#check").click(function () {
             $("#price").show();
