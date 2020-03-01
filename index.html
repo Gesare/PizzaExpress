@@ -118,16 +118,6 @@
                           <input type="radio" value="gluten-free" name="crust" id="gluten">thick crust 500
                       </div>
                       <div class="col-md-4">
-                          <label for="price" id="price">
-                              <h1>Price: </h1>
-                          </label>
-                          <label for="amount" id="pizza-amount">
-                              <h3></h3>
-                          </label>
-                      </div>
-                  </div><br>
-                  <div class="row ">
-                      <div class="col-md-5">
                           <label>Choose toppings</label><br>
                           <select id="toppings" multiple="multiple" size="9">
                               <option value="" disabled selected>Toppings that you might want:</option>
@@ -141,16 +131,7 @@
                               <option value="peppers" id="green">Green peppers</option>
                           </select>
                       </div>
-                      <div class="col-md-5">
-                          <label for="delivery" id="delivery">
-                              <h1>Delivery charges</h1>
-                          </label>
-                          <label for="charges" id="charges">150 ksh</label><br>
-                          <label for="details" id="order">
-                              <h3>Details</h3>
-                          </label><br>
-                          <label for="resume"><ul id="details"></ul></label>
-                      </div>
+                  </div><br>
                   </div><br>
                   <div class="row ">
                       <div class="col-md-8">
@@ -159,15 +140,37 @@
                       </div>
                   </div><br>
                   <div class="row ">
-                      <div class="col-md-8">
-                          <button id="pick" type="submit">Pickup</button>
-                          <button id="deliver" type="submit">Deliver</button>
+                      <div class="col-md-6">
+                          <button id="pick" type="submit"class="btn btn-success">Pickup</button>
+                          <button id="deliver" type="submit"class="btn btn-success">Deliver</button>
                       </div>
-                      <div class="col-md-7">
-                          <button id="check" type="submit">Checkout</button>
-                          <button id="add" type="submit">Add order</button>
+                    </div>
+                      <br><br><br>
+                     <div class="row">
+                      <div class="col-md-5">
+                          <button id="check" type="submit" class="btn btn-success" >Checkout</button>
+                          <button id="add" type="submit" class="btn btn-success" >Add order</button>
+                      </div>
+                      <div class="col-md-5">
+                          <label for="delivery" id="delivery">
+                              <h3>Delivery charges</h3>
+                          </label>
+                          <label for="charges" id="charges">150 ksh</label><br>
+                          <label for="details" id="order">
+                              <h3>Details</h3>
+                          </label><br>
+                          <label for="resume"><ul id="details"></ul></label>
                       </div>
                   </div>
+                  <div class="row ">
+                    <div class="col-md-4">
+                        <label for="price" id="price">
+                            <h3>Price: </h3>
+                        </label>
+                        <label for="amount" id="pizza-amount">
+                            <h3></h3>
+                        </label>
+                    </div>
                   <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
               </form>
           </div>
