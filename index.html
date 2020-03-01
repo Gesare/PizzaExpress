@@ -103,80 +103,85 @@
         <div class="row">
           <div class="col-md-12">
             <h2>ORDER HERE:</h2>
-            <form id="orders">
-                  <div class="row">
-                      <div class="col-md-4 ">
-                          <label>Choose the size</label><br>
-                          <input type="radio" name="size" value="small" id="small"> Small pizza 600ksh<br>
-                          <input type="radio" name="size" value="medium" id="medium"> Medium pizza 800ksh<br>
-                          <input type="radio" name="size" value="large" id="large"> Large pizza 1200ksh
-                      </div>
-                      <div class="col-md-4">
-                          <label>Choose the crust</label><br>
-                          <input type="radio" value="" name="crust" id="thin">Thin crust 300<br>
-                          <input type="radio" value="gluten" name="crust" id="gluten">Gluten-free crust 300<br>
-                          <input type="radio" value="gluten-free" name="crust" id="gluten">thick crust 500
-                      </div>
-                      <div class="col-md-4">
-                          <label>Choose toppings</label><br>
-                          <select id="toppings" multiple="multiple" size="9">
-                              <option value="" disabled selected>Toppings that you might want:</option>
-                              <option value="mushrooms" id="mushrooms">Sausage and caramelized onion</option>
-                              <option value="onions" id="onions">Pepperoni and tomatoes</option>
-                              <option value="pepperoni" id="peppe">Pepperoni and  sausage</option>
-                              <option value="bacon" id="bacon">Bacon and shrimp</option>
-                              <option value="barbecue" id="chicken">Barbecue sauce and chicken</option>
-                              <option value="taco" id="taco">BBQ sauce and grilled chicken</option>
-                              <option value="cheese" id="cheese">Extra cheese</option>
-                              <option value="peppers" id="green">Green peppers</option>
-                          </select>
-                      </div>
-                  </div><br>
-                  </div><br>
-                  <div class="row ">
-                      <div class="col-md-8">
-                          <label>Number of pizza's</label>
-                          <input type="number" min="1" placeholder="You can order as many" id="number">
-                      </div>
-                  </div><br>
-                  <div class="row ">
-                      <div class="col-md-6">
-                          <button id="pick" type="submit"class="btn btn-success">Pickup</button>
-                          <button id="deliver" type="submit"class="btn btn-success">Deliver</button>
-                      </div>
-                    </div>
-                      <br><br><br>
-                     <div class="row">
-                      <div class="col-md-5">
-                          <button id="check" type="submit" class="btn btn-success" >Checkout</button>
-                          <button id="add" type="submit" class="btn btn-success" >Add order</button>
-                      </div>
-                      <div class="col-md-5">
-                          <label for="delivery" id="delivery">
-                              <h3>Delivery charges</h3>
-                          </label>
-                          <label for="charges" id="charges">150 ksh</label><br>
-                          <label for="details" id="order">
-                              <h3>Details</h3>
-                          </label><br>
-                          <label for="resume"><ul id="details"></ul></label>
-                      </div>
-                  </div>
-                  <div class="row ">
-                    <div class="col-md-4">
-                        <label for="price" id="price">
-                            <h3>Price: </h3>
-                        </label>
-                        <label for="amount" id="pizza-amount">
-                            <h3></h3>
-                        </label>
-                    </div>
-                  <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
-              </form>
           </div>
         </div>
-        </div>
+            <form id="orders">
+              <div class="row">
+                <div class="col-md-4 ">
+                  <label>Choose the size</label><br>
+                  <input type="radio" name="size" value="small" id="small"> Small pizza 600ksh<br>
+                  <input type="radio" name="size" value="medium" id="medium"> Medium pizza 800ksh<br>
+                  <input type="radio" name="size" value="large" id="large"> Large pizza 1200ksh
+                </div>
+                <div class="col-md-4">
+                  <label>Choose the crust</label><br>
+                  <input type="radio" value="" name="crust" id="thin">Thin crust 300<br>
+                  <input type="radio" value="gluten" name="crust" id="gluten">Gluten-free crust 300<br>
+                  <input type="radio" value="gluten-free" name="crust" id="gluten">thick crust 500
+                </div>
+                <div class="col-md-4">
+                  <label>Choose toppings</label><br>
+                  <select id="toppings" multiple="multiple" size="9">
+                    <option value="" disabled selected>Toppings that you might want:</option>
+                    <option value="mushrooms" id="mushrooms">Sausage and caramelized onion</option>
+                    <option value="onions" id="onions">Pepperoni and tomatoes</option>
+                    <option value="pepperoni" id="peppe">Pepperoni and  sausage</option>
+                    <option value="bacon" id="bacon">Bacon and shrimp</option>
+                    <option value="barbecue" id="chicken">Barbecue sauce and chicken</option>
+                    <option value="taco" id="taco">BBQ sauce and grilled chicken</option>
+                    <option value="cheese" id="cheese">Extra cheese</option>
+                    <option value="peppers" id="green">Green peppers</option>
+                  </select>
+                </div>
+              </div><br>
+            <br>
+            <div class="row ">
+              <div class="col-md-8">
+                <label>Number of pizza's</label>
+                <input type="number" min="1" placeholder="You can order as many" id="number">
+              </div>
+            </div> <br>
+            <div class="row ">
+              <div class="col-md-12">
+                <button id="pick" type="submit"class="btn btn-success">Pickup</button>
+                <button id="deliver" type="submit"class="btn btn-success">Deliver</button>
+              </div>
+            </div>
+            <br><br><br>
+            <div class="row">
+              <div class="col-md-12">
+                <button id="check" type="submit" class="btn btn-success" >Checkout</button>
+                <button id="add" type="submit" class="btn btn-success" >Add order</button>
+              </div>
+            </div>
+            <div>
+              <div class="col-md-12">
+                <label for="delivery" id="delivery">
+                  <h3>Delivery charges</h3>
+                </label>
+                <label for="charges" id="charges">150 ksh</label><br>
+                <label for="details" id="order">
+                  <h3>Details</h3>
+                </label><br>
+                <label for="resume"><ul id="details"></ul></label>
+              </div>
+            </div>
+
+            <div class="row ">
+              <div class="col-md-12">
+                <label for="price" id="price">
+                  <h3>Price:</h3>
+                </label>
+                <label for="amount" id="pizza-amount">
+                  <h4> </h4>
+                </label>
+              </div>
+              <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+            </form>
+
+</div>
       </div>
+    </div>
     <br><br>
   </body>
   </html>
