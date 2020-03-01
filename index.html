@@ -103,68 +103,77 @@
         <div class="row">
           <div class="col-md-8">
             <h2>ORDER HERE:</h2>
-            <form id="new-contact">
-              <div class="new-deli">
-                <div id="new-deli">
-              <div class="form-group">
-                <label for="new-first-name">Full name:</label>
-                <input type="text" class="form-control" id="new-first-name">
-              </div>
-              <div class="form-group">
-                <label for="sel1">Pizza size :Select list (select one):</label>
-                <select class="form-control" id="sel1" name="sellist1">
-                  <option>Small 600ksh</option>
-                  <option>Medium 800ksh</option>
-                  <option>Large  1200ksh</option>
-                </select>
-             </div>
-                  <label for="sel2">top</label>
-                  <select  class="form-control" id="sel2" name="sellist2">
-                    <option>Sausage, caramelized onions, and fennel- 300ksh.</option>
-                    <option>Pepperoni, tomatoes, mushrooms, and onion-300ksh.</option>
-                    <option>Pepperoni, sausage, green pepper, onion, and mushroom- 300ksh.</option>
-                    <option>BBQ sauce, grilled chicken, scallions, and cheddar cheese 300ksh.</option>
-                    <option>Thousand Island dressing, topped with sauerkraut, corned beef or pastrami, and Swiss cheese -300ksh.</option>
-                  </select>
-                  <br>
-                  <div class="form-group">
-                    <label for="new-first-name">Amount:</label>
-                    <input type="number" class="form-control" id="new-first-name">
+            <form id="orders">
+                  <div class="row">
+                      <div class="col-md-8 ">
+                          <label>Choose the size</label><br>
+                          <input type="radio" name="size" value="small" id="small"> Small pizza 600ksh<br>
+                          <input type="radio" name="size" value="medium" id="medium"> Medium pizza 800ksh<br>
+                          <input type="radio" name="size" value="large" id="large"> Large pizza 1200ksh
+                      </div>
+                      <div class="col-md-8">
+                          <label>Choose the crust</label><br>
+                          <input type="radio" value="" name="crust" id="thin">Thin crust 300<br>
+                          <input type="radio" value="gluten" name="crust" id="gluten">Gluten-free crust 300<br>
+                          <input type="radio" value="gluten-free" name="crust" id="gluten">thick crust 500
+                      </div>
+                      <div class="col-md-8">
+                          <label for="price" id="price">
+                              <h1>Price: </h1>
+                          </label>
+                          <label for="amount" id="pizza-amount">
+                              <h3></h3>
+                          </label>
+                      </div>
+                  </div><br>
+                  <div class="row ">
+                      <div class="col-md-8">
+                          <label>Choose toppings</label><br>
+                          <select id="toppings" multiple="multiple" size="9">
+                              <option value="" disabled selected>Toppings that you might want:</option>
+                              <option value="mushrooms" id="mushrooms">Sausage and caramelized onion</option>
+                              <option value="onions" id="onions">Pepperoni and tomatoes</option>
+                              <option value="pepperoni" id="peppe">Pepperoni and  sausage</option>
+                              <option value="bacon" id="bacon">Bacon and shrimp</option>
+                              <option value="barbecue" id="chicken">Barbecue sauce and chicken</option>
+                              <option value="taco" id="taco">BBQ sauce and grilled chicken</option>
+                              <option value="cheese" id="cheese">Extra cheese</option>
+                              <option value="peppers" id="green">Green peppers</option>
+                          </select>
+                      </div>
+                      <div class="col-md-8">
+                          <label for="delivery" id="delivery">
+                              <h1>Delivery charges</h1>
+                          </label>
+                          <label for="charges" id="charges">150 ksh</label><br>
+                          <label for="details" id="order">
+                              <h3>Details</h3>
+                          </label><br>
+                          <label for="resume"><ul id="details"></ul></label>
+                      </div>
+                  </div><br>
+                  <div class="row ">
+                      <div class="col-md-8">
+                          <label>Number of pizza's</label>
+                          <input type="number" min="1" placeholder="--order as much as possible--" id="number">
+                      </div>
+                  </div><br>
+                  <div class="row ">
+                      <div class="col-md-8">
+                          <button id="pick" type="submit">Pickup</button>
+                          <button id="deliver" type="submit">Deliver</button>
+                      </div>
+                      <div class="col-md-7">
+                          <button id="check" type="submit">Checkout</button>
+                          <button id="add" type="submit">Add order</button>
+                      </div>
                   </div>
-                   </div>
-                </div>
-                <div class="Delivery">
-                  <div class="form-group">
-                    <br><br>
-                    <h3>DELIVERIES</h3>
-                    <label for="new-street">Street</label>
-                    <input type="text" class="form-control new-street">
-                  </div>
-                  <div class="form-group">
-                    <label for="new-city">City</label>
-                    <input type="text" class="form-control new-city">
-                  </div>
-                  <div class="form-group">
-                    <label for="new-county">County</label>
-                    <input type="text" class="form-control new-county">
-                  </div>
-                </div>
-
-
-              <span class="btn btn-primary" id="add-address">Another order</span>
-
-              <button type="submit" class="btn">Add</button>
-            </form>
-
-            <h2>Contacts:</h2>
-            <ul id="contacts">
-
-            </ul>
+                  <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+              </form>
           </div>
         </div>
         </div>
       </div>
-    </div>
     <br><br>
   </body>
   </html>
