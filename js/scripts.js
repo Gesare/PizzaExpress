@@ -15,23 +15,23 @@ $(document).ready(function () {
         event.preventDefault();
 
         var choosenSize = $("input[name='size']:checked").val();
-        var sizedPrice;
+        var priceSize;
         if (choosenSize === "Small") {
-            sizedPrice = 600;
+            priceSize = 600;
         }
         else if (choosenSize === "Medium") {
-            sizedPrice = 800;
+            priceSize = 800;
         }
         else {
-            sizedPrice = 1200;
+            priceSize = 1200;
         }
         var choosenCrust = $("input[name='crust']:checked").val();
-        var crustPrice;
+        var priceCrust;
         if ((choosenCrust === "thin") || (choosenCrust === "gluten")) {
-            crustPrice = 300;
+            priceCrust = 300;
         }
         else {
-            crustPrice = 500;
+            priceCrust = 500;
         }
         var choosenToppings = [];
         $("#toppings option:selected").each(function () {
@@ -67,7 +67,7 @@ $(document).ready(function () {
         $("#price").show();
         $("#order").show();
         $("#details").text()=choosenSize+", "+choosenCrust+", ";
-        $("#pizza-amount").text() = sizedPrice + crustPrice + specialTopping + " Rwf";
+        $("#pizza-amount").text() = priceSize + priceCrust + specialTopping + " Rwf";
         $("#check").show();
         $("#check").click(function () {
             $("#price").show();
