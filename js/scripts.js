@@ -1,4 +1,5 @@
 $("document").ready(function(){
+  //This is for the hover effect on the pictures.
   $(".A").hover(function(){
     $(".large").slideToggle()
   });
@@ -8,20 +9,7 @@ $("document").ready(function(){
   $(".C").hover(function(){
     $(".small").slideToggle()
   });
-    function person (name){
-        this.name = name;
 
-    }
-        person.prototype.profile = function(){
-         $("#name").text("Your name is "+this.name)
-
-        }
-        $("#profile").click(function(){
-            var name = $(".name").val();
-            var location = $(".location").val();
-             var user = new person(name,location)
-            user.profile()
-        })
     function order(size,toppings,number,delivery,type){
         this.size = size;
         this.toppings =toppings;
