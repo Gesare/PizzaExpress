@@ -1,100 +1,79 @@
-// Business logic section
-function Order(size, crust, topping, number) {
-    this.pizzaSize = size;
-    this.pizzaCrust = crust;
-    this.pizzaToppings = topping;
-    this.pizzaNumber = number;
-}
-Order.prototype.aboutOrder = function () {
-    return this.pizzaSize + "," + this.pizzaCrust + "," + this.pizzaToppings + "," + this.pizzaNumber;
-}
+$("document").ready(function(){
+    function person (name,email,phone){
+        this.name = name;
+        this.email = email;
+        this.phone = phone;
+    }
+        person.prototype.profile = function(){
+         $("#name").text("Your name is "+this.name)
+         $("#email").text("Your Email address is "+this.email)
+         $("#phone").text("Your Phone number is "+this.phone)
+        }
+        $("#profile").click(function(){
+            var name = $(".name").val();
+            var email =$(".Email").val();
+            var phone = $(".phone").val();
+            var location = $(".location").val();
+             var user = new person(name,email,phone,location)
+            user.profile()
+        })
+    function order(size,toppings,number,delivery,type){
+        this.size = size;
+        this.toppings =toppings;
+        this.number = number;
+        this.delivery = delivery;
+        this.type = type;
+    }
+    order.prototype.price = function(){
+        let price =0;
+        let Total =0;
+        if (this.size === "Large"){
+         price =1100;
+         Total = price + 300;
+         Total = Total * this.number;
+        }
+        else if (this.size === "Medium"){
+            price = 800;
+            Total = price + 300;
+            Total =Total * this.number;
+        }
+        else if(this.size ==="small"){
+            price=500
+            Total = price + 300;
+            Total = Total * this.number;
+        }
+        else alert("Enter your sizes ")
+        var delivery=prompt("Would like it hand delivered or you would like to proceed to our restaurant ?")
+        if(delivery === "hand delivered"){
+            alert("You'll have to add ksh.300 to your full price ")
+            Total = Total + 300;
+             var location =prompt("Please enter your location")
+             $("#location").text("Your location is "+location)
+        }
+        else if(delivery === "proceed to restaurant"){
+            alert("We are expecting you soon");
+        }
+        else alert('Wrong choice');
 
-// User interface part
-$(document).ready(function () {
-    $('form#orders').submit(function (event) {
-        event.preventDefault();
+        $("#details").text("Your pizza will be ready shortly,The total price is  "+Total +"." +" And your  pizza size is  "+this.size);
 
-        var choosenSize = $("input[name='size']:checked").val();
-        var priceSize;
-        if (choosenSize === "Small") {
-            priceSize = 600;
-        }
-        else if (choosenSize === "Medium") {
-            priceSize = 800;
-        }
-        else {
-            priceSize = 1200;
-        }
-        var choosenCrust = $("input[name='crust']:checked").val();
-        var priceCrust;
-        if ((choosenCrust === "thin") || (choosenCrust === "gluten")) {
-            priceCrust = 300;
-        }
-        else {
-            priceCrust = 500;
-        }
-        var choosenToppings = [];
-        $("#toppings option:selected").each(function () {
-            choosenToppings.push($(this).val());
+    }
+     $(".calc").click(function(){
+         var type = $("#type").val()
+         var size= $("#size").val();
+         var toppings = $(".toppings").val();
+         var number = $(".number").val();
+         var delivery = $(".delivery").val();
+          var myOrder = new order(size,toppings,number,delivery,type);
+          myOrder.price()
         });
-        var addToppings = 0;
-        for (var top = 0; top < choosenToppings.length; top++) {
-            if (choosenToppings[top] === "Sausage and caramelized onion") {
-                addToppings += 50;
-            }
-            else if ((choosenToppings[top] === "Pepperoni and tomatoes") || (choosenToppings[top] === "Green peppers")) {
-                addToppings += 100;
-            }
-            else if (choosenToppings[top] === "Pepperoni and tomatoes") {
-                addToppings += 150;
-            }
-            else if (choosenToppings === "Pepperoni and sausage") {
-                addToppings += 170;
-            }
-            else if ((choosenToppings === "Barbecue sauce and chicken") || (choosenToppings === "BBQ sauce and grilled chicken")) {
-                addToppings += 200;
-            }
-            else {
-                addToppings += 70;
-            }
-        }
-        var choosenNumber = parseInt($("#number").val());
-        var newOrder = new Order(choosenSize, choosenCrust, addToppings, choosenNumber)
-
-    });
-
-    $("#pick").click(function () {
-        $("#price").show();
-        $("#order").show();
-        $("#details").text()=choosenSize+", "+choosenCrust+", ";
-        $("#pizza-amount").text() = priceSize + priceCrust + specialTopping + " ksh";
-        $("#check").show();
-        $("#check").click(function () {
-            $("#price").show();
-            $("#order").show();
-            $("#add").show();
+        $(".A").hover(function(){
+          $(".large").slideToggle()
         });
-    });
-    $("#deliver").click(function () {
-        alert("Please, mention your location!");
-        var location = prompt("Please enter your location kindly;");
-        alert("Thank you very much your pizza will be delivered at " + location);
-        $("#check").show();
-        $("#check").click(function () {
-            $("#price").show();
-            $("#order").show();
-            $("#delivery").show();
-            $("#charges").show();
-            $("#add").show();
+        $(".B").hover(function(){
+          $(".medium").slideToggle()
         });
-    });
-  $(".A").hover(function(){
-  $(".large").slideToggle()
-});
-$(".B").hover(function(){
-  $(".medium").slideToggle()
-});
-$(".C").hover(function(){
-  $(".small").slideToggle()
-});
-});
+        $(".C").hover(function(){
+          $(".small").slideToggle()
+        });
+       })

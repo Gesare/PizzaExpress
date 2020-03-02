@@ -66,31 +66,10 @@ strong{
 .ct{
   text-align: center;
 }
-.ef{
+
+#xy{
   text-align: center;
   background-color: orange;
-}
-#delivery,#order,#price,#check,#add,#charges{
-    display: none;
-  }
-  .large{
-    display: none;
-    background-color: orange;
-    color: white;
-  }
-  .medium{
-    display: none;
-    background-color: orange;
-    color: white;
-  }
-  .small{
-    display: none;
-    background-color: orange;
-    color:white;
-  }
-  label{
-    font-size: 30px;
-  }
-input type {
-  font-size: 20px;
+  padding-left: 200px;
+  padding-right: 200px;
 }
