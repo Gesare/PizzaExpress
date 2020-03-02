@@ -9,7 +9,7 @@ $("document").ready(function(){
   $(".C").hover(function(){
     $(".small").slideToggle()
   });
-
+//this section is for the orders and etc
     function order(size,toppings,number,delivery,type){
         this.size = size;
         this.toppings =toppings;
