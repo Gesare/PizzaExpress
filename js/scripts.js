@@ -51,7 +51,7 @@ $("document").ready(function(){
         }
         else alert('Please input the correct answer.');
 
-        $("#details").text("Your order will be delivered shortly.your total payment is "+Total +"." +" And you choose this type of pizza "+this.size);
+        $("#details").text("You will recieve your order in like 15-20 minutes.Your total payment is "+Total +"." +" And you choose this type of pizza "+this.size);
 
     }
      $(".calc").click(function(){
