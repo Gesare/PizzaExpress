@@ -39,7 +39,7 @@ $("document").ready(function(){
             Total = Total * this.number;
         }
         else alert("Enter your sizes ")
-        var delivery=prompt("If you want your pizza to br delivered to your location.Answer yes.If not answer nope ?")
+        var delivery=prompt("Do you want your pizza to be delivered to your location?\n Answer yes.\nIf not answer nope .\nYou will see the total at the bottom of the page.")
         if(delivery === "yes"){
             alert("You'll have to add ksh.150 to your full price ")
             Total = Total + 150;
@@ -51,7 +51,7 @@ $("document").ready(function(){
         }
         else alert('Please input the correct answer.');
 
-        $("#details").text("You will recieve your order in like 15-20 minutes.Your total payment is "+Total +"." +" And you choose this type of pizza "+this.size);
+        $("#details").text("You will recieve your order in like 15-20 minutes.Your total payment is "+Total +"." +" And you choose a "+this.size+" pizza.");
 
     }
      $(".calc").click(function(){
