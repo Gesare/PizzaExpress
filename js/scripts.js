@@ -1,4 +1,13 @@
 $("document").ready(function(){
+  $(".A").hover(function(){
+    $(".large").slideToggle()
+  });
+  $(".B").hover(function(){
+    $(".medium").slideToggle()
+  });
+  $(".C").hover(function(){
+    $(".small").slideToggle()
+  });
     function person (name){
         this.name = name;
 
@@ -63,14 +72,5 @@ $("document").ready(function(){
           var myOrder = new order(size,toppings,number,delivery,type);
           myOrder.price()
 
-        });
-        $(".A").hover(function(){
-          $(".large").slideToggle()
-        });
-        $(".B").hover(function(){
-          $(".medium").slideToggle()
-        });
-        $(".C").hover(function(){
-          $(".small").slideToggle()
         });
        })
